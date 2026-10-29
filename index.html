@@ -2,13 +2,67 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f6f8fa">
+    <meta name="description" content="A personal log of starred GitHub repositories.">
     <title>Stargazers log</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
   </head>
   <body>
-    <h1>Stargazers log</h1>
-    <p>A log of the repositories I've starred.</p>
-    <ul id="starred"></ul>
-    <script src="script.js"></script>
+    <header class="page-header">
+      <div class="header-inner">
+        <p class="eyebrow"><span class="eyebrow-mark" aria-hidden="true">✦</span> GitHub activity</p>
+        <h1 id="page-title">Stargazers log</h1>
+        <p class="subtitle">A little corner of the internet for the projects worth remembering.</p>
+      </div>
+    </header>
+
+    <main class="page-content">
+      <section class="panel" aria-labelledby="repo-list-heading">
+        <div class="panel-heading">
+          <div>
+            <p class="section-label">Your collection</p>
+            <h2 id="repo-list-heading">Starred repositories</h2>
+          </div>
+          <span id="repo-count" class="count" aria-label="0 repositories">0</span>
+        </div>
+
+        <div class="toolbar">
+          <label class="search-field">
+            <span class="visually-hidden">Search repositories</span>
+            <svg class="search-icon" aria-hidden="true" viewBox="0 0 20 20">
+              <circle cx="8.75" cy="8.75" r="5.75"></circle>
+              <path d="m13 13 4 4"></path>
+            </svg>
+            <input id="repo-search" type="search" placeholder="Search repositories…" autocomplete="off">
+          </label>
+
+          <label class="sort-field">
+            <span class="visually-hidden">Sort repositories</span>
+            <select id="repo-sort">
+              <option value="newest">Recently starred</option>
+              <option value="oldest">Oldest first</option>
+              <option value="name">Name A–Z</option>
+            </select>
+          </label>
+        </div>
+
+        <p id="status" class="status" role="status" aria-live="polite">
+          Loading your repositories…
+        </p>
+
+        <div id="error-message" class="error-message" role="alert" hidden>
+          <span id="error-text">The repository log could not be loaded.</span>
+          <button id="retry-button" class="retry-button" type="button">Try again</button>
+        </div>
+
+        <ul id="repo-list" class="repo-list"></ul>
+      </section>
+
+      <footer class="page-footer">
+        <span>Made for the things you find along the way.</span>
+      </footer>
+    </main>
   </body>
 </html>
