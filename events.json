@@ -1,0 +1,23 @@
+[
+  {
+    "name": "microsoft/vscode",
+    "description": "Visual Studio Code",
+    "url": "https://github.com/microsoft/vscode",
+    "language": "TypeScript",
+    "starredAt": "2026-10-12T18:30:00Z"
+  },
+  {
+    "name": "vercel/next.js",
+    "description": "The React framework for production",
+    "url": "https://github.com/vercel/next.js",
+    "language": "JavaScript",
+    "starredAt": "2026-09-25T09:15:00Z"
+  },
+  {
+    "name": "openai/openai-cookbook",
+    "description": "Examples and guides for using the OpenAI API",
+    "url": "https://github.com/openai/openai-cookbook",
+    "language": "Jupyter Notebook",
+    "starredAt": "2026-08-18T14:05:00Z"
+  }
+]

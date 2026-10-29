@@ -2,10 +2,35 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A log of the repositories I've starred.">
     <title>Stargazers log</title>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <h1>Stargazers log</h1>
-    <p>A log of the repositories I've starred.</p>
+    <header class="page-header">
+      <p class="eyebrow">GitHub activity</p>
+      <h1 id="page-title">Stargazers log</h1>
+      <p class="subtitle">A log of the repositories I've starred.</p>
+    </header>
+
+    <main id="app" class="page-content">
+      <section class="panel" aria-labelledby="repo-list-heading">
+        <div class="panel-header">
+          <h2 id="repo-list-heading">Starred repositories</h2>
+          <span id="repo-count" class="count" aria-live="polite">0</span>
+        </div>
+
+        <p id="status" class="status" role="status" aria-live="polite">
+          Loading starred repositories…
+        </p>
+
+        <ul id="repo-list" class="repo-list" aria-live="polite"></ul>
+      </section>
+    </main>
+
+    <div id="error-message" class="error-message" role="alert" aria-live="assertive" hidden></div>
+
+    <script src="script.js" defer></script>
   </body>
 </html>
